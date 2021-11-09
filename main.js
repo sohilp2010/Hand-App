@@ -15,7 +15,7 @@ document.getElementById("result").innerHTML = '<img id="capture_image" src="'+da
     })
 }
 
-classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/5mxzZHkpx/model.json',modelLoaded);
+classifier = ml5.imageClassifier('https://teachablemachine.withgoogle.com/models/D2MHJI8pG/model.json',modelLoaded);
 function modelLoaded(){
     console.log('modelLoaded');
 }
@@ -42,29 +42,29 @@ document.getElementById("results_emotion_name2").innerHTML = results[1].label;
 prediction_1 = results[0].label;
 prediction_2 = results[1].label;
 speak();
-if(results[0].label == "happy")
+if(results[0].label == "Hi")
 {
-    document.getElementById("update_emoji").innerHTML = "&#128522;";
+    document.getElementById("update_emoji").innerHTML = "&#128400;";
 }
-if(results[0].label == "sad")
+if(results[0].label == "Yes")
 {
-    document.getElementById("update_emoji").innerHTML = "&#128532;";
+    document.getElementById("update_emoji").innerHTML = "&#128077;";
 }
-if(results[0].label == "mad")
+if(results[0].label == "No")
 {
-    document.getElementById("update_emoji").innerHTML = "&#128548;";
+    document.getElementById("update_emoji").innerHTML = "&#128078;";
 }
-if(results[1].label == "happy")
+if(results[1].label == "Hi")
 {
-    document.getElementById("update_emoji").innerHTML = "&#128522;";
+    document.getElementById("update_emoji2").innerHTML = "&#128400;";
 }
-if(results[1].label == "sad")
+if(results[1].label == "Yes")
 {
-    document.getElementById("update_emoji").innerHTML = "&#128532;";
+    document.getElementById("update_emoji2").innerHTML = "&#128077;";
 }
-if(results[1].label == "mad")
+if(results[1].label == "No")
 {
-    document.getElementById("update_emoji").innerHTML = "&#128548;";
+    document.getElementById("update_emoji2").innerHTML = "&#128078;";
 }
 }
 }
